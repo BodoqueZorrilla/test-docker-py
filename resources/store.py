@@ -10,7 +10,7 @@ from models import StoreModel
 
 blp = Blueprint("Stores", __name__, "Operations on stores")
 
-@blp.route("/stores/<string:store_id>")
+@blp.route("/stores/<int:store_id>")
 class Store(MethodView):
 
     @jwt_required()

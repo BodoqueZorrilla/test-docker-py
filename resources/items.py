@@ -8,7 +8,7 @@ from models import ItemModel
 
 blp = Blueprint("Items", __name__, "Operations on items")
 
-@blp.route("/items/<string:item_id>")
+@blp.route("/items/<int:item_id>")
 class Store(MethodView):
     @jwt_required()
     @blp.response(200, ItemSchema)
