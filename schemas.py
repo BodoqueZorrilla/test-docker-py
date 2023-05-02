@@ -43,3 +43,6 @@ class UserSchema(Schema):
     id = fields.Int(dump_only=True)#because we are not going to receive value from client
     username = fields.Str(required=True)
     password = fields.Str(required=True, load_only=True)#this is because never is going to being sent to the cient 
+
+class UserRegisterSchema(UserSchema):
+    email = fields.Str(required=True)
